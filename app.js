@@ -51,6 +51,7 @@ const User = mongoose.model('User', userSchema);
 
 app.get('/signup', (req, res) => {
     res.render('signup');
+    
 });
 
 app.post('/signup', async (req, res) => {
@@ -73,7 +74,9 @@ app.post('/signup', async (req, res) => {
 
     try {
         await newUser.save();
+       
         res.redirect('/login');
+    
     } catch (error) {
         res.status(500).send('Error registering user');
     }

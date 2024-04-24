@@ -1,4 +1,5 @@
 To run the application, execute the following command:
+To start the server run the below command in terminal:-
 
 nodemon app.js
 
